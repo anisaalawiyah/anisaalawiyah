@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+    <link rel="stylesheet" th:href="@{/css/admin.css}"/>
+
+	<title>AdminHub</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">AdminHub</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a th:href="@{/admin}">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a th:href="@{/customer}">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">customer</span>
+				</a>
+			</li>
+			<li>
+				<a th:href="@{/admin-room}">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Room</span>
+				</a>
+			</li>
+			<li>
+				<a th:href="@{/booking-admin}">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Booking</span>
+				</a>
+			</li>
+			
+
+		
+			
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<form action="#" th:action="@{/search}" method="get">
+				<div class="form-input">
+					<input type="date" placeholder="Search..." name="search">
+					<button type="submit" value="cari" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			
+			<a href="#" class="profile">
+				<img src="img/people.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Dashboard</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-calendar-check' ></i>
+					<span class="text">
+						<h3>1020</h3>
+						<p>New Order</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<h3>2834</h3>
+						<p>Visitors</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-dollar-circle' ></i>
+					<span class="text">
+						<h3>$2543</h3>
+						<p>Total Sales</p>
+					</span>
+				</li>
+			</ul>
+
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Booking data</h3>
+						
+						<a th:href="@{/sortByNameAsc}">
+							<button>Asc</button>
+						 </a>
+						 <a th:href="@{/sortByNameDesc}">
+							<button>Desc</button>
+						 </a>
+					</div>
+					<table>
+						<thead>
+							<tr>
+                <th scope="col">No</th>
+                <th scope="col">nama</th>
+                <th scope="col">checkInDate</th>
+                <th scope="col">checkInDate</th>
+                <th scope="col">lama menginap</th>
+                <th scope="col">Type</th>
+                <th scope="col">total pembayaran</th>
+                <th scope="col">Action</th>
+							</tr>
+						</thead>
+            <tbody>
+              <tr th:each="b,stat : ${booking}">
+                <td th:text="${stat.index+1}" class="text-center"></td>
+                <td th:text="${b.idCustomer.name}"></td>
+                <td th:text="${b.checkInDate}"></td>
+                <td th:text="${b.checkOutDate}"></td>
+                <td th:text="${b.duration}" class="text-center"></td>
+                <td th:text="${b.idRoom.type}"></td>
+                <td th:text="${b.totalPemesanan}"></td>  
+                <td class="d-flex flex-row justify-content-evenly">
+                  <a
+                    th:href="@{/update-Booking/{idBooking}(idBooking=${b.idBooking})}"
+                    class="btn btn-outline-success"
+                    >Update</a
+                  >
+                  <a
+                  class="btn btn-outline-danger"
+                    th:href="@{/delete-booking/{idBooking}(idBooking=${b.idBooking})}"
+                    >Delete</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+					</table>
+				</div>
+				
+					
+			
+		</main>
+		
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script src="js.js"></script>
+</body>
+</html>

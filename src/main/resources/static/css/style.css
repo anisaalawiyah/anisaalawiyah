@@ -1,0 +1,177 @@
+
+/* Login admin */
+body {
+    background-color: hsl(210, 17%, 98%);
+    background-image: url(../bg2.jpg);
+    background-size: 100%;
+    background-position: center;
+    font-family: "Cormorant Garamond";
+}
+
+ .card{
+    background-color: #836f6f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto; 
+    max-width: 600px; 
+} 
+
+/* login user */
+  .container{
+    font-family: "Arial", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  .box {
+    position: relative;
+    width: 380px;
+    height: 480px; 
+    border-radius: 8px;
+    background-color: #836f6f;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    border: none; 
+  }
+
+  .box form {
+    background-color: #836f6f;
+    position: absolute;
+    inset: 4px;
+    padding: 50px 40px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .box form h2 {
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+  }
+
+  .box form .message {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .box form .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .box form .inputBox input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 4px;
+    transition: 0.5s;
+  }
+
+  .box form .inputBox span {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    transition: 0.5s;
+    opacity: 0.7;
+  }
+
+  .box form .inputBox input:valid ~ span,
+  .box form .inputBox input:focus ~ span {
+    color: transparent;
+    font-size: 0.75em;
+    transform: translateY(-70%);
+    opacity: 1;
+  }
+
+  .box form .links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .box form .links a {
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .box form .links a:hover {
+    color: #46413b;
+  }
+
+  .box form input[type="submit"],
+  .box form a button {
+    border: none;
+    outline: none;
+    padding: 14px;
+    background: #8a9fa1;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 20px;
+    color: white;
+    transition: background 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .box form input[type="submit"]:hover,
+  .box form a button:hover {
+    background: #1c1c1c;
+    color:#e22f28;
+}
+/* update booking */
+  .container-1{
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+
+/* show booking */
+
+      .bungkus {
+        font-family: "Cormorant Garamond";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        font-weight: 10%;
+      }
+
+      .container-2 {
+        background-color: #836f6f;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        max-width: 600px; 
+        width: 100%; 
+      }
+
+      .details {
+        margin: 0 auto;
+        text-align: left; 
+      }
+
+ 
+    }

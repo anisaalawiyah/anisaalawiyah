@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Customer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,300;1,700&display=swap"
+          rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            background-image: url('bg2.jpg');
+            background-size: 100%;
+            background-position: center;
+            font-family: "Cormorant Garamond";
+        }
+
+        .container-box {
+            background-color: #836f6f;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 50px auto; /* Center vertically and horizontally */
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5 container-box">
+    <h1 class="mb-4 text-center">Add Customer</h1> <!-- Center the heading -->
+    <form th:action="@{/add-customer}" method="post">
+
+        <div class="mb-4">
+            <input type="text" placeholder="Name" name="name" class="form-control"/>
+        </div>
+
+        <div class="mb-4">
+            <input type="text" placeholder="Address" name="address" class="form-control"/>
+        </div>
+
+        <div class="mb-4">
+            <input type="email" placeholder="Email" name="email" class="form-control"/>
+        </div>
+
+        <div class="mb-4">
+            <input type="text" placeholder="Phone Number" name="phoneNumber" class="form-control"/>
+        </div>
+
+        <div class="mb-4">
+            <input type="password" placeholder="Password" name="password" class="form-control"/>
+        </div>
+
+        <div class="mb-4">
+            <input type="text" placeholder="Username" name="username" class="form-control"/>
+        </div>
+
+        <div class="text-center"> <!-- Center the button -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+        <div th:if="${error}" th:text="${error}" class="alert alert-danger mt-3"></div>
+        <div th:if="${message}" th:text="${message}" class="alert alert-success mt-3"></div>
+    </form>
+</div>
+</body>
+</html>

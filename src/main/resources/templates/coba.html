@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.min.css"/>
+  <title>Document</title>
+  <style>
+    .content-container {
+      margin-top: 300%; /* Adjust the top margin to create space for the fixed navbar */
+      padding-top: 50px; /* Adjust the top padding to create space for the fixed navbar */
+
+    }
+    body {
+    padding-top: 50px; /* Adjust the top padding to create space for the fixed navbar */
+  }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+    <a class="navbar-brand" href="#">SELAMAT DATANG ADMINB <b> HOTEL BALI</b></a>
+    <div class="icon ml-4 ml-auto"></div>
+  </nav>
+  <div class="container-fluid fixed-left">
+    <div class="row">
+      <div class="col-md-2 bg-dark pr-3 pt-4 container-fluid position-sticky" >
+        <ul class="nav flex-column ml-3 mb-4">
+          <li class="nav-item">
+            <a class="nav-link active text-white" th:href="@{/admin}"><i class='bx bxs-dashboard mr-2'></i>Dashboard</a> <hr class="bg-secondary">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" th:href="@{/customer}"><i class='bx bxs-user mr-2'></i>DataCustomer</a><hr class="bg-secondary">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" th:href="@{/admin-room}"><i class='bx bxs-building-house mr-2' ></i>Data Room</a><hr class="bg-secondary">
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link text-white" th:href="@{/booking-admin}"><i class='bx bxs-calendar-check mr-2' ></i>Data Booking</a><hr class="bg-secondary">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-10 p-5 pt-2">
+        <h3><i class='bx bxs-calendar-check mr-2' ></i></i>DATA BOOKING</h3><hr>
+            <table
+              class="table table-success table-striped table-hover table-bordered "
+            >
+              <thead class="table-dark text-center">
+                <tr>
+                  <th scope="col">idBooking</th>
+                  <th scope="col">nama</th>
+                  <th scope="col">checkInDate</th>
+                  <th scope="col">checkInDate</th>
+                  <th scope="col">lama menginap</th>
+                  <th scope="col">checkInDate</th>
+                  <th scope="col">total pembayaran</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody class="text-center">
+                <tr th:each="b : ${booking}">
+                  <td th:text="${b.idBooking}" class="text-center"></td>
+                  <td th:text="${b.idCustomer.name}"></td>
+                  <td th:text="${b.checkInDate}"></td>
+                  <td th:text="${b.checkOutDate}"></td>
+                  <td th:text="${b.duration}"></td>
+                  <td th:text="${b.idRoom.type}"></td>
+                  <td th:text="${b.totalPemesanan}"></td>  
+                  <td class="d-flex flex-row justify-content-evenly">
+                    <a
+                      th:href="@{/update-Booking/{idBooking}(idBooking=${b.idBooking})}"
+                      class="btn btn-outline-success"
+                      >Update</a
+                    >
+                    <a
+                    class="btn btn-outline-danger"
+                      th:href="@{/delete-booking/{idBooking}(idBooking=${b.idBooking})}"
+                      >Delete</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+     </div>
+
+
+    <div class="container mx-2">
+    </div> 
+    <script src="../static/js.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   </body>
+</html>

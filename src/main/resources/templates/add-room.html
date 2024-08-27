@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Add Room</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,300;1,700&display=swap">
+    <link rel="stylesheet" th:href="@{/css/add-room.css}"/>
+</head>
+
+<body>
+    <div class="container-box">
+        <h1 class="mb-4 text-center">Add Room</h1>
+        <form th:action="@{/save-room}" th:object="${room}" method="post" enctype="multipart/form-data" class="wider-form">
+
+            <div class="mb-4">
+                <input type="text" placeholder="Room Type" th:field="${room.type}" />
+            </div>
+
+            <div class="mb-4">
+                <input type="number" placeholder="Price" th:field="${room.price}" />
+            </div>
+
+            <div class="mb-4">
+                <input type="text" placeholder="Status" th:field="${room.status}" />
+            </div>
+
+            <div class="mb-4">
+                <input type="text" placeholder="Size" th:field="${room.size}" />
+            </div>
+
+            <label class="image-upload mb-4">
+                <input required type="file" name="file" accept="image/png, image/jpg" />
+                <div class="image-uploads">
+                    <img th:src="@{/img/icons/upload.svg}" alt="img" />
+                    <h4>Drag and drop a file to upload</h4>
+                </div>
+            </label>
+          
+            <button type="submit" class="btn">Save</button>
+        </form>
+        <hr />
+    </div>
+    <script src="/src/main/resources/static/js.js"></script>
+</body>
+
+</html>

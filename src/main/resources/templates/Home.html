@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Home</title>
+
+      <link rel="stylesheet" href="../css/responsive.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,300;1,700&display=swap"
+            rel="stylesheet">
+      <link rel="stylesheet" th:href="@{/css/home.css}"/>
+</head>
+
+<body>
+      <!-- untuk video latar belakang yang ada di home -->
+      <div id="video-background">
+            <video autoplay muted loop id="my-video">
+                  <source src="vidio.mp4.mp4">
+            </video>
+      </div>
+      <header class="header">
+          <div class="tulisan">
+            <h1><b>BALI HOTEL</b></h1>
+          </div>
+            </div>
+            <!-- membuat header bagian kanan untuk login  -->
+            <ul>
+                  <li><ath:href="@{/home}">HOME</a></li>
+                   <li><a id="room">ROOMS</a></li>
+                  <!-- <li><a th:href="@{/add-admin}">ADMIN</a></li> -->
+                  <li><a th:href="@{/login-user}">LOGIN</a></li>
+
+            </ul>
+      </header>
+    
+      <nav>
+            <div class="intro">
+                  <!-- <h1>The World Of Country</h1>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Nulla debitis harum facere! Consequuntur hic animi magnam, quis eaque iste quibusdam?
+                        Perferendis, fugiat?</p>
+                  <hr>
+                  <h2>Travel The World With Me</h2> -->
+            </div>
+      </nav>
+      <aside>
+      </aside>
+      <main>
+            <section>
+                  <article class="article">
+                        <div class="img">
+                              <img src="gamabar1.jpg" alt="">
+                        </div>
+                        <div class="article-content">
+                              <h2>The sacred birds of longevity revered in Bhutan</h2>
+                              <p>PERCHED ON A forest-clad hill overlooking the Phobjikha Valley, Gangtey Goemba is one
+                                    of the oldest and largest Nyingmapa monasteries in Bhutan.
+                                    Every November, local children, farmers, and monks flood the monastery's courtyard
+                                    to celebrate the arrival of some beloved visitors:
+                                    black-necked cranes, among the rarest cranes in the world—several hundred of which
+                                    migrate here each year.
+                                    The cranes travel from their summer breeding grounds on the Tibetan Plateau to this
+                                    picturesque Bhutanese valley, where they feed on the dwarf bamboo that grows in the
+                                    valley's alpine wetlands. </p>
+                              <button class="button"><a
+                                          href="https://www.nationalgeographic.com/expeditions/get-inspired/inside-look/bhutans-black-necked-crane-festival/"
+                                          id="readMoreBtn">read more</a></button>
+                        </div>
+                  </article><br>
+                  <article class="article">
+                        <div class="img">
+                              <img src="gamabar2.jpg" alt="">
+                        </div>
+                        <div class="article-content">
+                              <h2>Fakta Benin City, Punya Tembok Lebih Panjang dari Tembok Besar China</h2>
+                              <p>Sebelum tahun 900, lokasi Benin City saat ini adalah hutan hujan yang lebat dan tidak
+                                    ramah.
+                                    Namun, pada awal abad baru, bangsa Edo mulai membuka hutan hujan dan membangun
+                                    pemukiman di tanah tersebut.
+                                    Seperti dilansir BBC, kerajaan mereka yang baru terbentuk, Igodomigodo, diperintah
+                                    oleh raja yang disebut Ogisos, atau "penguasa langit."</p>
+                              <button class="button"><a
+                                          href="https://www.idntimes.com/science/discovery/amelia-solekha/fakta-benin-city-afrika-c1c2"
+                                          id="readMoreBtn2">read more</a></button>
+                        </div>
+                  </article>
+                  <article class="article">
+                    <div class="img">
+                          <img src="gambar3.jpg" alt="">
+                    </div>
+                    <div class="article-content">
+                          <h2>Fakta Benin City, Punya Tembok Lebih Panjang dari Tembok Besar China</h2>
+                          <p>Sebelum tahun 900, lokasi Benin City saat ini adalah hutan hujan yang lebat dan tidak
+                                ramah.
+                                Namun, pada awal abad baru, bangsa Edo mulai membuka hutan hujan dan membangun
+                                pemukiman di tanah tersebut.
+                                Seperti dilansir BBC, kerajaan mereka yang baru terbentuk, Igodomigodo, diperintah
+                                oleh raja yang disebut Ogisos, atau "penguasa langit."</p>
+                          <button class="button"><a
+                                      href="https://www.idntimes.com/science/discovery/amelia-solekha/fakta-benin-city-afrika-c1c2"
+                                      id="readMoreBtn2">read more</a></button>
+                    </div>
+              </article>
+            </section>
+      </main>
+      <!-- footer yang isinya ada informasi,kontak dan lain lain -->
+      <footer>
+            <div class="box-footer">
+                  <div class="info">
+                        <h4>Infomasi</h4>
+                        <p>Lorem ipsum dolor elit. nemo
+                              facere dolores quidem. Repellendus odit omnis incidunt!</p>
+                        <a href="">Learn More</a>
+                  </div>
+                  <div class="link-tautan">
+                        <h4>Berita Terkini</h4>
+                        <a href="">News</a>
+                        <a href="">Linked</a>
+                        <a href="">CNN Global</a>
+                        <a href="">Cia World</a>
+                  </div>
+                  <div class="contact-info">
+                        <h4>Hubungi Kami</h4>
+                        <p><img src="../media/email.png" alt="">gcounty@gmail.com</p>
+                        <p><img src="../media/telephone.png" alt="">(123) 456-7890</p>
+                  </div>
+                  <div class="social-media">
+                        <h4>Ikuti Kami</h4>
+                        <a href="" target="_blank"><img src="../media/facebook.png" alt="">Facebook</a>
+                        <a href="" target="_blank"><img src="../media/twitter.png" alt="">Twitter</a>
+                        <a href="" target="_blank"><img src="../media/instagram.png" alt="">Instagram</a>
+                  </div>
+            </div>
+            <div class="disclaimer">
+                  <p>&copy; 2023 Bali hotel All rights reserved.</p>
+            </div>
+      </footer>
+      <script>
+        const dataUser = new URLSearchParams(window.location.search)
+        localStorage.setItem("id", dataUser.get("id"))
+        localStorage.setItem("name", dataUser.get("name"))
+        localStorage.setItem("email", dataUser.get("email"))
+        const a = document.getElementById("room")
+        a.setAttribute("href", "/Room?id="+ localStorage.getItem("id") + "&name=" + localStorage.getItem("name") + "&email=" + localStorage.getItem("email"))
+      </script>
+</body>
+
+</html>

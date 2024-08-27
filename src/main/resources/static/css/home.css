@@ -1,0 +1,303 @@
+/* untuk mengatur kesuluruhan css */
+* {
+margin: 0px;
+padding: 0px;
+font-family: "Cormorant Garamond";
+}
+/* mengatur body css */
+body {
+margin: 0px;
+padding: 0px;
+}
+
+/* ======================== CSS UNTUK HOME ==================================== */
+
+/* ----------------------------header---------------------------------- */
+/* untuk mengedit header dan pengaturan headernya berlaku untuk semuan halamn */
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: fixed;
+z-index: 2; /* agar si header berada di paling atas elemen lain yang bertumpuk*/
+width: 100%;
+height: 70px;
+box-shadow: 0 0 10px #483a3a;
+background: rgba(47, 27, 27, 0.3);
+}
+/* untuk mengatur label yang menampilkan icon hamburger */
+#chk1 {
+display: none;
+}
+i {
+color: rgb(255, 255, 255);
+cursor: pointer;
+}
+/* untuk mengatur scroll header */
+.fixed {
+background-color: #664d4d;
+}
+
+.tulisan h1 {
+padding: 100px 50px;
+color: #fff;
+} 
+
+
+
+/* untuk mengatur tag link img dan tulisan */
+header ul {
+flex: 2;
+display: flex;
+justify-content: space-evenly;
+padding-right: 20px;
+text-decoration: none;
+color: #fff;
+}
+/* untuk mengatur navbar*/
+header ul li {
+list-style: none;
+font-size: 20px;
+}
+header ul li a {
+text-decoration: none;
+color: #fff;
+font-weight: 400;
+padding: 10px 15px;
+}
+/* hover untuk link navbar jika di hover */
+header ul li a:hover,
+header ul li a.active {
+border-radius: 5px;
+border-bottom: 2px double black;
+background-color: rgba(255, 255, 255, 0.3);
+color: black;
+transition: 0.5s;
+}
+/* untuk mengatur header icon hamburger agar menu bar nya bisa jadi responsive */
+header .hamburger {
+display: none;
+}
+
+/* ----------------------------- finish css header------------------------------------------- */
+/* mengatur header semua halaman */
+#video-background {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw; 
+height: 100vh; 
+z-index: -1;
+overflow: hidden; /* Mencegah video terlihat di luar area latar belakang */
+}
+#my-video {
+width: 100%; /* Agar video memenuhi lebar video-background */
+height: 100%; /* Agar video memenuhi tinggi video-background */
+object-fit: cover; /* Agar video diatur sesuai aspek rasio dan memenuhi seluruh area video-background */
+}
+
+/* untuk mengatur title navbar agar berada di tengah video */
+.intro {
+color: rgb(251, 247, 247);
+text-align: center;
+justify-content: center;
+align-items: center;
+position: relative;
+padding: 400px 400px;
+overflow: hidden;
+z-index: 1;
+color: white;
+}
+/* untuk header utanya di navbar */
+.intro h1 {
+font-size: 90px;
+}
+/* untuk mengatur tag p nya */
+.intro p {
+font-size: 20px;
+}
+/* untuk mengatur gambar di dalam article */
+.img img {
+width: 30vw;
+height: 50vh;
+}
+/* untuk mengatur bagian article nya */
+.article {
+margin: 40px 0px;
+display: flex;
+padding: 50px;
+padding-left: 10px;
+background-color: rgba(255, 255, 255, 0.6);
+/* background-color: #DCBFFF; */
+backdrop-filter: blur(15px);
+}
+/* mengatur isi yang ada di section dengan kelas article content  */
+.article-content {
+padding: 10px 30px 10px 70px;
+word-spacing: 10px;
+letter-spacing: 1px;
+}
+.article-content h2 {
+font-size: 40px;
+text-transform: capitalize;
+color: #333;
+}
+.article-content p {
+padding: 40px 80px 20px 35px;
+font-size: 19px;
+line-height: 30px;
+color: #464242;
+}
+/* untuk mengatur button read more di article home */
+.button {
+padding: 15px 25px;
+font-size: 24px;
+text-align: center;
+cursor: pointer;
+outline: none;
+color: #fff;
+background-color: #4f4343;
+border: none;
+border-radius: 15px;
+box-shadow: 0 6px #999;
+}
+.button a {
+text-decoration: none;
+color: #fff;
+text-transform: capitalize;
+}
+.button:hover {
+background-color: #756767;
+}
+.button:active {
+background-color: #777;
+box-shadow: 0 2px #666;
+transform: translateY(5px);
+}
+/* untuk mengatur button scroll kembali ke atas*/
+#my-btn img {
+position: fixed;
+bottom: 20px;
+right: 30px;
+z-index: 4;
+outline: none;
+cursor: pointer;
+padding: 15px;
+}
+
+/*----------------------------------- CSS untuk styling footer ---------------------------------------*/
+/* untuk mengatur footer semua halaman jadi nggak perlu di edit lagi halamn lainnya karena sama */
+footer {
+background-color: #333;
+color: #fff;
+text-align: center;
+}
+/* untuk mengatur agar si footer nya bisa menjadi 4 */
+.box-footer {
+display: flex;
+box-sizing: content-box;
+text-align: center;
+justify-content: space-around;
+padding: 30px;
+margin: 10px;
+font-size: 20px;
+letter-spacing: 1px;
+line-height: 30px;
+
+}
+/* untuk mengedit gambar yang ada di footer */
+.box-footer img {
+width: 2vw;
+}
+/* mengedit informasinya */
+.info {
+width: 30vw;
+}
+/* untuk mengedit judul di informasi */
+.info h4 {
+font-family: sans-serif;
+padding-bottom: 10px;
+}
+.info a{
+text-decoration: none;
+color: hwb(220 12% 39%);
+font-style: italic;
+}
+.info a:hover{
+color: #bd3a3a;
+text-decoration: underline;
+}
+/* untuk mengatur link tautan  */
+.link-tautan {
+width: 30vw;
+}
+/* untuk mengatur link tautan judulnya */
+.link-tautan h4 {
+font-family: sans-serif;
+padding-bottom: 10px;
+}
+/* untuk mengatur linknya */
+.link-tautan a {
+color: #fff;
+text-align: left;
+text-decoration: none;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+}
+/* untuk menghovernya */
+.link-tautan a:hover {
+text-decoration: underline;
+color: #bd3a3a;
+}
+/* untuk mengatur kontak info */
+.contact-info {
+width: 20vw;
+}
+/* untuk mengatur judul kontak info */
+.contact-info h4 {
+font-family: sans-serif;
+padding-bottom: 10px;
+}
+/* utuk mengatur isi kontak info */
+.contact-info p {
+text-align: center;
+justify-content: center;
+align-items: center;
+display: flex;
+gap: 10px;
+}
+/* untuk menghover kontak info */
+.contact-info p:hover {
+color: rgb(91, 91, 184);
+}
+/* untuk mengatur social media */
+.social-media {
+width: 20vw;
+}
+.social-media h4 {
+font-family: sans-serif;
+padding-bottom: 10px;
+}
+.social-media a {
+color: #fff;
+text-decoration: none;
+justify-content: center;
+align-items: center;
+display: flex;
+gap: 10px;
+}
+/* untuk menghover sicial media */
+.social-media a:hover {
+color: rgb(91, 91, 184);
+}
+/* untuk mengatur footer paling bawah */
+.disclaimer {
+padding: 15px;
+font-size: 20px;
+text-align: center;
+background-color: #4f4343;
+}
+.nav-link:hover{
+background-color: grey;
+}
